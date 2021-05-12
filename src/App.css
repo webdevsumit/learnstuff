@@ -1,38 +1,118 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head{
+	background-color:rgba(200,200,200,0);
+	text-align:left;
+	padding:5px;
+	position:fixed;
+	right:0px;
+	z-index:1;
+	cursor:pointer;
+	opacity:0.9;
+	transition:all ease 0.5s;
+	color:orange;
+	outline:none;
+	border:none;
+	font-size:10px;
+	font-weight:bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.head:hover{
+	color:white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a{
+	font-size:14px;
+	text-decoration:none;
+	transition:all ease 0.5s;
+	color:black;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover{
+	border-bottom:2px solid black;
+	font-size:15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav{
+	height:10px;
+	overflow:hidden;
+	transition:all ease 0.5s;
+	position:fixed;
+	background-color:rgb(200,200,200);
+	width:100%;
+	opacity:0;
+	cursor:pointer;
+}
+
+.nav-head:hover~.nav,.nav:hover{
+	height:150px;
+	padding:10px;
+	opacity:0.9;
+}
+
+section{
+	min-height:100vh;
+	max-height:200vh;
+	width:100%;
+	padding:40px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	background-size:cover;
+	background-position:center left;
+}
+
+section:nth-child(odd){
+	background-color:black;
+	color:orange;
+}
+
+
+section:nth-child(even){
+	background-color:white;
+}
+
+.back-img{
+	position:absolute;
+	left:0;
+	opacity:0.3;
+	width:100%;
+}
+
+.hero-head{
+	font-family:helvetica;
+	padding-left:50px;
+	text-align:left;
+	
+}
+
+p{
+	font-size:16px;
+	letter-spacing:2px;
+	padding:3px;
+}
+
+.section-head{
+	padding:50px;
+	letter-spacing:3px;
+}
+
+.sub-section{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+
+.sub-section div{
+	flex:1
 }
